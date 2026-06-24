@@ -1,0 +1,232 @@
+# Smart Farm Management System - Requirements
+
+## System Requirements
+
+
+### Software Requirements:
+- Operating System: Windows 10/11, macOS 10.15+, or Linux
+- Node.js: v18.0.0 or higher
+- Package Manager: pnpm (recommended) or npm
+- Web Browser: Chrome 90+, Firefox 88+, Safari 14+, or Edge 90+
+- Code Editor: VS Code (recommended) or any modern IDE
+
+## Core Dependencies
+
+### Frontend Framework:
+- Next.js v16.0.7
+- React v19.2.0
+- React DOM v19.2.0
+- TypeScript v5.x
+
+### Styling & UI:
+- Tailwind CSS v4.1.9
+- Autoprefixer v10.4.20
+- PostCSS v8.5
+- tailwindcss-animate v1.0.7
+- class-variance-authority v0.7.1
+- clsx v2.1.1
+- tailwind-merge v2.5.5
+
+### UI Component Libraries:
+- Radix UI Components:
+  - @radix-ui/react-accordion v1.2.2
+  - @radix-ui/react-alert-dialog v1.1.4
+  - @radix-ui/react-avatar v1.1.2
+  - @radix-ui/react-checkbox v1.1.3
+  - @radix-ui/react-dialog v1.1.4
+  - @radix-ui/react-dropdown-menu v2.1.4
+  - @radix-ui/react-label v2.1.1
+  - @radix-ui/react-select v2.1.4
+  - @radix-ui/react-separator v1.1.1
+  - @radix-ui/react-slot v1.1.1
+  - @radix-ui/react-toast v1.2.4
+  - @radix-ui/react-tooltip v1.1.6
+
+### Icons & Assets:
+- lucide-react v0.454.0
+
+### Form Management:
+- react-hook-form v7.60.0
+- @hookform/resolvers v3.10.0
+- zod v3.25.76
+
+### Data Visualization:
+- recharts v2.15.4
+
+### Date & Time:
+- date-fns v4.1.0
+- react-day-picker v9.8.0
+
+### UI Enhancements:
+- next-themes v0.4.6 (dark/light mode)
+- sonner v1.7.4 (toast notifications)
+- cmdk v1.0.4 (command menu)
+- embla-carousel-react v8.5.1
+- vaul v1.1.2 (drawer component)
+- input-otp v1.4.1
+- react-resizable-panels v2.1.7
+
+### Analytics:
+- @vercel/analytics (latest)
+
+## Development Dependencies
+
+- @tailwindcss/postcss v4.1.9
+- @types/node v22.x
+- @types/react v19.x
+- @types/react-dom v19.x
+- tw-animate-css v1.3.3
+- TypeScript v5.x
+
+## Functional Requirements
+
+### Authentication & Authorization:
+✓ Role-based access control (Super Admin, Owner, Executive Manager)
+✓ Protected routes based on user roles
+✓ User session management
+✓ Login/logout functionality
+
+### User Management:
+✓ Super Admin can manage all farm owners
+✓ Owner profile with CNIC and contact details
+✓ Pakistani CNIC format validation (13 digits)
+✓ Pakistani phone number validation (11 digits)
+
+### Farm Management:
+✓ Create, read, update, delete farms
+✓ Farm statistics (total cows, active/inactive collars)
+✓ Location-based farm organization
+✓ Owner assignment to farms
+✓ Multi-farm support for owners
+
+### Animal Management:
+✓ Track animals with collar IDs
+✓ Monitor age, breed, weight
+✓ Real-time temperature monitoring
+✓ Activity level tracking (Low, Normal, High)
+✓ Health status monitoring (Healthy, Unhealthy)
+✓ Estrus cycle detection
+✓ Add, update, remove animals
+
+### Health Records:
+✓ Create and manage health records
+✓ Link records to collar IDs
+✓ Veterinarian information tracking
+✓ Treatment and notes documentation
+✓ Date-stamped records
+✓ Filtering and search capabilities
+
+### Employee Management:
+✓ Assign executive managers to farms
+✓ One manager per farm validation
+✓ Employee contact information
+✓ Join date tracking
+✓ Manager assignment/reassignment
+
+### Dashboard Features:
+✓ Role-specific dashboards
+✓ Real-time statistics and charts
+✓ Quick action cards
+✓ Data visualization with recharts
+✓ Responsive layout
+
+### Data Validation:
+✓ Name validation (no numbers allowed)
+✓ Numeric field validation (no negative numbers)
+✓ CNIC format: XXXXX-XXXXXXX-X
+✓ Phone format: 11 digits (Pakistani)
+✓ Email validation
+✓ Required field validation
+✓ Real-time input filtering
+
+### UI/UX Requirements:
+✓ Responsive design (mobile, tablet, desktop)
+✓ Glassmorphic card design
+✓ Modal popups for all CRUD operations
+✓ Dark/light theme support
+✓ Loading states and animations
+✓ Toast notifications for user feedback
+✓ Color-coded status badges
+✓ Filterable data tables
+✓ Confirmation dialogs for delete actions
+
+## Pakistani Localization Requirements:
+✓ Pakistani names (Abdullah, Waleed, Shayan, Tasmiah, Nouman)
+✓ Pakistani locations (Lahore, Karachi, Islamabad)
+✓ Pakistani addresses (Model Town, DHA, F-10)
+✓ Pakistani cattle breeds (Sahiwal, Cholistani, Red Sindhi)
+✓ Pakistani phone number format
+✓ Pakistani CNIC format
+✓ Pakistani farm names (Al-Baraka, Madina, Rehmat)
+
+## Browser Compatibility:
+✓ Google Chrome 90+
+✓ Mozilla Firefox 88+
+✓ Safari 14+
+✓ Microsoft Edge 90+
+✓ Mobile browsers (iOS Safari, Chrome Mobile)
+
+## Performance Requirements:
+✓ Initial page load: < 3 seconds
+✓ Route transitions: < 500ms
+✓ Modal open/close: < 300ms
+✓ Table filtering: < 200ms
+✓ Smooth animations at 60fps
+
+## Security Requirements:
+✓ Input sanitization
+✓ XSS protection
+✓ CSRF protection (Next.js built-in)
+✓ Secure password handling
+✓ Role-based route protection
+✓ Form validation (client & server-side)
+
+## Accessibility Requirements:
+✓ WCAG 2.1 Level AA compliance
+✓ Keyboard navigation support
+✓ Screen reader compatible
+✓ Focus indicators
+✓ Semantic HTML
+✓ ARIA labels where needed
+
+## Installation Steps:
+
+1. Install Node.js (v18+)
+2. Install pnpm: npm install -g pnpm
+3. Clone the repository
+4. Run: pnpm install
+5. Run: pnpm dev
+6. Access: http://localhost:3000
+
+## Environment:
+- Development: pnpm dev (localhost:3000)
+- Production: pnpm build && pnpm start
+- Linting: pnpm lint
+
+## Deployment Options:
+- Vercel (recommended for Next.js)
+- Netlify
+- AWS Amplify
+- Self-hosted (Node.js server)
+- Docker containers
+
+## Future Requirements (Planned):
+○ Real-time IoT collar integration
+○ Push notifications
+○ PDF report generation
+○ Urdu language support
+○ Mobile app (React Native)
+○ Advanced analytics dashboard
+○ WhatsApp integration for alerts
+○ SMS notifications
+○ Backup and restore functionality
+○ Export data (CSV, Excel)
+○ Multi-tenancy support
+○ Payment integration
+○ Subscription management
+
+---
+
+Last Updated: December 9, 2025
+Project Type: Final Year Project (FYP)
+Target Users: Pakistani Dairy Farmers & Farm Managers

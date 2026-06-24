@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  ml-api:
+    build: ./ml-api
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+
+  webapp:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - ML_API_URL=http://ml-api:5000
+    depends_on:
+      - ml-api
+    restart: unless-stopped

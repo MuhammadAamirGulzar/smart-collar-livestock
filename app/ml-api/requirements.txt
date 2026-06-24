@@ -1,0 +1,6 @@
+flask
+flask-cors
+joblib
+pandas
+numpy>=2.0.0
+scikit-learn>=1.5.0

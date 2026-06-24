@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+.next/
+package-lock.json
+pnpm-lock.yaml
+serviceAccountKey.json
